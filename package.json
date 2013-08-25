@@ -1,6 +1,6 @@
 {
   "name": "validator-errors",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A wrapper for the validator package that adds an error list",
   "main": "validator_errors.js",
   "dependencies": {
