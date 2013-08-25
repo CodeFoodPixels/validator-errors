@@ -1,4 +1,4 @@
-var Validator = require('validator');
+var Validator = require('validator').Validator;
 
 Validator.prototype.error = function (msg) {
     this._errors.push(msg);
