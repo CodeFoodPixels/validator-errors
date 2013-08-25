@@ -1,0 +1,19 @@
+{
+  "name": "validator-errors",
+  "version": "0.0.1",
+  "description": "A wrapper for the validator package that adds an error list",
+  "main": "validator_errors.js",
+  "dependencies": {
+    "validator": "~1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukeb-uk/validator-errors"
+  },
+  "author": "lukeb",
+  "license": "MIT"
+}
