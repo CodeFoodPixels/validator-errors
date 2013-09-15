@@ -1,12 +1,23 @@
-var Validator = require('validator').Validator;
+var nodeValidator = require('validator');
 
-Validator.prototype.error = function (msg) {
-    this._errors.push(msg);
+nodeValidator._errors = [];
+
+nodeValidator.Validator.prototype.error = function (msg) {
+    nodeValidator._errors.push(msg);
     return this;
 }
 
-Validator.prototype.getErrors = function () {
-    return this._errors;
+nodeValidator.getErrors = function (clearErrors) {
+    if(clearErrors) {
+        var errors = nodeValidator._errors;
+        nodeValidator.clearErrors();
+        return errors;
+    }
+    return nodeValidator._errors;
 }
 
-module.exports = new Validator();
+nodeValidator.clearErrors = function () {
+    nodeValidator._errors = [];
+}
+
+module.exports = nodeValidator;
